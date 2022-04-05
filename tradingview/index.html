@@ -26,15 +26,15 @@
         const urlStr = window.location.href;
         const url = new URL(urlStr);
         const urlParams = url.searchParams;
-        const ticker = urlParams.get('ticker')
-          ? urlParams.get('ticker')
+        const symbol = urlParams.get('symbol')
+          ? urlParams.get('symbol')
           : 'NASDAQ:AAPL';
         const timezone = urlParams.get('timezone')
           ? urlParams.get('timezone')
           : 'America/New_York';
         new TradingView.widget({
           autosize: true,
-          symbol: ticker,
+          symbol: symbol,
           interval: 'D',
           timezone: timezone,
           theme: 'light',
